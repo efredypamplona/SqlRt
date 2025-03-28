@@ -145,6 +145,17 @@ git checkout  nombre-de-la-rama
 El parámetro -u (o --set-upstream) enlaza la rama local con la remota, para que en el futuro solo necesites usar git push sin especificar la rama.
 
 
+Verifica si el archivo realmente está en la rama remota
+git ls-remote origin
+git ls-tree -r origin/pruebas --name-only
+
+
+
+\\Para mirar git en local
+git pull guarda en local no en remoto
+ls -la
+
+
 
 
 
