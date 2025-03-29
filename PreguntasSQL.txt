@@ -1,0 +1,68 @@
+Preguntas Básicas
+
+¿Qué es SQL y para qué se utiliza?
+
+Explica la diferencia entre INNER JOIN, LEFT JOIN, RIGHT JOIN y FULL JOIN.
+
+¿Qué hace la cláusula GROUP BY y cuándo se usa?
+
+¿Cuál es la diferencia entre WHERE y HAVING?
+
+Escribe una consulta para obtener los primeros 10 registros de una tabla llamada Sales.SalesOrderHeader.
+
+¿Cómo filtras los productos cuyo nombre comienza con "A" en la tabla Production.Product?
+
+¿Qué es un índice en SQL y cuáles son sus tipos?
+
+¿Cómo actualizas el precio de un producto en la tabla Production.Product?
+
+¿Cuál es la diferencia entre DELETE, TRUNCATE y DROP?
+
+¿Para qué sirve DISTINCT en una consulta?
+
+/////////////////////////////
+
+Preguntas Intermedias
+Escribe una consulta que obtenga la cantidad total de pedidos por cliente en Sales.Customer.
+
+¿Cómo usas una subconsulta dentro de un SELECT?
+
+¿Cuál es la diferencia entre una clave primaria y una clave foránea?
+
+Escribe una consulta para obtener los clientes que han hecho compras en 2023.
+
+¿Cómo encontrar productos que nunca han sido vendidos usando NOT EXISTS?
+
+Explica la diferencia entre UNION y UNION ALL.
+
+¿Cómo escribirías una consulta para calcular el precio promedio de los productos vendidos en Sales.SalesOrderDetail?
+
+¿Qué es una CTE (Common Table Expression) y cómo se usa?
+
+¿Cómo podrías encontrar empleados con el salario más alto en la tabla HumanResources.EmployeePayHistory?
+
+¿Cómo manejarías datos duplicados en una tabla?
+
+/////////////////////////////////
+
+Preguntas Avanzadas
+
+Explica cómo optimizar una consulta en SQL Server.
+
+¿Qué es una vista (VIEW) y cuándo se recomienda usarla?
+
+Escribe una consulta que use una window function para calcular el total acumulado de ventas por cliente.
+
+¿Cómo funciona la función RANK() y en qué se diferencia de DENSE_RANK()?
+
+¿Qué es una transacción en SQL y cómo garantizas su integridad con COMMIT y ROLLBACK?
+
+Explica cómo funciona el WITH (NOLOCK) y sus implicaciones.
+
+¿Cómo podrías detectar y resolver un deadlock en SQL Server?
+
+¿Cómo harías una partición de datos usando PARTITION BY en una consulta?
+
+Escribe una consulta que obtenga el segundo pedido más caro en Sales.SalesOrderHeader.
+
+¿Cómo harías una optimización de índice en una tabla con millones de registros?
