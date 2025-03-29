@@ -6,3 +6,16 @@ SELECT name from sys.tables
 SELECT TABLE_SCHEMA, TABLE_NAME 
 FROM INFORMATION_SCHEMA.TABLES 
 WHERE TABLE_NAME = 'SalesOrderHeader';
+
+
+SELECT name from sys.tables
+
+SELECT 
+    soh.SalesOrderID, 
+    soh.OrderDate, 
+    sod.ProductID, 
+    sod.OrderQty, 
+    sod.LineTotal
+FROM Sales.SalesOrderHeader AS soh
+INNER JOIN Sales.SalesOrderDetail AS sod
+    ON soh.SalesOrderID = sod.SalesOrderID;
