@@ -120,6 +120,10 @@ git switch --track origin/nombre-de-la-rama
 \\Ver en qué rama estás actualmente
 git branch --show-current
 
+\\esto lista todos los archivos de una rama
+git ls-files
+
+
  Resumen:
 
 Usa git branch -r para ver las ramas remotas.
@@ -148,5 +152,67 @@ El parámetro -u (o --set-upstream) enlaza la rama local con la remota, para que
 \\recuperar un archivo eliminado despues de un commit p un push
 git checkout HEAD^ -- Guia_git.txt
 
+\\\\\\\\\\\\\\\\\\\ comando git help 
+
+Estas son comandos comunes de Git utilizados en diversas situaciones:
+
+Iniciar un área de trabajo (ver también: git help tutorial)
+clone → Clonar un repositorio en un nuevo directorio.
+
+init → Crear un repositorio Git vacío o reinicializar uno existente.
+
+Trabajar en los cambios actuales (ver también: git help everyday)
+add → Agregar contenido de archivos al índice.
+
+mv → Mover o renombrar un archivo, directorio o enlace simbólico.
+
+restore → Restaurar archivos del árbol de trabajo.
+
+rm → Eliminar archivos del árbol de trabajo y del índice.
+
+Examinar el historial y el estado (ver también: git help revisions)
+bisect → Usar búsqueda binaria para encontrar el commit que introdujo un error.
+
+diff → Mostrar cambios entre commits, entre un commit y el árbol de trabajo, etc.
+
+grep → Imprimir líneas que coincidan con un patrón.
+
+log → Mostrar registros de commits.
+
+show → Mostrar varios tipos de objetos.
+
+status → Mostrar el estado del árbol de trabajo.
+
+Expandir, marcar y ajustar el historial común
+backfill → Descargar objetos faltantes en una clonación parcial.
+
+branch → Listar, crear o eliminar ramas.
+
+commit → Registrar cambios en el repositorio.
+
+merge → Unir dos o más historiales de desarrollo.
+
+rebase → Reaplicar commits sobre otra base.
+
+reset → Restablecer el HEAD actual a un estado específico.
+
+switch → Cambiar de rama.
+
+tag → Crear, listar, eliminar o verificar una etiqueta firmada con GPG.
+
+Colaborar (ver también: git help workflows)
+fetch → Descargar objetos y referencias desde otro repositorio.
+
+pull → Descargar e integrar cambios desde otro repositorio o una rama local.
+
+push → Actualizar referencias remotas junto con los objetos asociados.
+
+📌 Usa los siguientes comandos para más ayuda:
+
+git help -a y git help -g → Listan los subcomandos disponibles y algunas guías conceptuales.
+
+git help <comando> o git help <concepto> → Muestra información detallada sobre un comando o concepto específico.
+
+git help git → Proporciona una visión general del sistema Git.
 
 
