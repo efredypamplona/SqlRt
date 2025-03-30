@@ -1,6 +1,14 @@
+
+\\Conectarse a la Rama remota
 git remote add origin https://github.com/efredypamplona/CodigoETLPrueba.git
 
-//pasar credencialas a git remoto
+\\desconectar del remoto
+git remote remove origin
+
+\\restablecer cache de git
+git rm -r --cached .
+
+\\pasar credencialas a git remoto
 git config --global user.email "efredypamplona@gmail.com"
 git config --global user.name "efredy pamplona"
 
@@ -49,13 +57,9 @@ git push -u origin nueva-funcionalidad
 Resumen:
 
 Usa git branch para ver ramas locales.
-
 Usa git branch -r para ver ramas remotas.
-
 Usa git branch -a para ver todas.
-
 Usa git status para verificar si tu rama local está vinculada a una remota.
-
 Verificar si el repositorio local está conectado a un remoto
 git remote -v
 
@@ -80,7 +84,7 @@ git push origin main
 
 Si Git te pide credenciales cada vez que haces git pull o git push, puedes hacer lo siguiente:
 
-🔹 Método 1: Usar un Token de Acceso Personal (PAT)
+Método 1: Usar un Token de Acceso Personal (PAT)
 En GitLab, ve a:
 Configuración → Access Tokens → Crear un nuevo token con permisos de repo y write.
 
@@ -95,13 +99,9 @@ git clone https://gitlab.com/usuario/proyecto.git
 Resumen:
 
 Usa git remote -v para verificar la conexión con GitLab.
-
 Usa git remote add origin URL para conectar tu repositorio local a GitLab.
-
 Usa git pull y git push para verificar acceso.
-
 Si Git pide autenticación, usa un Token de Acceso Personal (PAT).
-
 Si aún no tienes el repo en tu PC, usa git clone URL.
 
 \\Cambiar a una rama remota
@@ -111,6 +111,7 @@ git checkout nombre-de-la-rama
 
 \\Traer una rama remota si aún no está en local
 git fetch
+
 \\Después, crea una copia local de la rama remota y cámbiate a ella:
 git checkout -b nombre-de-la-rama origin/nombre-de-la-rama
 O con switch:
@@ -124,28 +125,29 @@ git branch --show-current
 git ls-files
 
 
- Resumen:
+Resumen:
 
 Usa git branch -r para ver las ramas remotas.
-
 Usa git fetch para actualizar la lista de ramas.
-
 Usa git checkout -b nombre-rama origin/nombre-rama para crear la rama local desde la remota.
-
 Usa git switch nombre-rama para cambiar de rama.
 
-Opción 1: Crear una rama desde la terminal (Git) y subirla a GitLab
- Asegúrate de estar en la rama desde donde quieres crear la nueva rama (por ejemplo, main o desarrollo):
+
+
+\\Crear una rama desde la terminal (Git) y subirla a GitLab
+Asegúrate de estar en la rama desde donde quieres crear la nueva rama (por ejemplo, main o desarrollo):
 git checkout main
-(O también puedes usar git switch main en versiones nuevas de Git.)
-Crea la nueva rama localmente:
+
+\\también puedes usar git switch main en versiones nuevas de Git.
+
+\\Crea la nueva rama localmente:
 git branch nombre-de-la-rama
 O directamente cambia a la nueva rama:
 git checkout -b nombre-de-la-rama
 si la rama ya esta creada en el local solo cambiala
 git checkout  nombre-de-la-rama
- Sube la nueva rama a GitLab remoto:
- git push -u origin nombre-de-la-rama
+Sube la nueva rama a GitLab remoto:
+git push -u origin nombre-de-la-rama
 El parámetro -u (o --set-upstream) enlaza la rama local con la remota, para que en el futuro solo necesites usar git push sin especificar la rama.
 
 
