@@ -100,4 +100,62 @@ SET STATISTICS TIME OFF;
 CREATE NONCLUSTERED INDEX idx_ProductID 
 ON Sales.SalesOrderDetail (ProductID);
 
+--¿Cómo actualizas el precio de un producto en la tabla Production.Product?
+select * from Production.Product
 
+--UPDATE o TRUNCATE
+
+UPDATE Production.Product
+SET ListPrice = 500.00
+FROM
+Production.Product
+WHERE Production.Product.ProductID = 1
+
+
+--eliminar duplicados con DISTINCT
+SELECT DISTINCT ProductSubcategoryID, color
+FROM Production.Product;
+
+--Escribe una consulta que obtenga la cantidad total de pedidos por cliente en Sales.Customer.
+ 
+ --obtener cantidad total
+ --
+
+ select * from Sales.Customer
+ SELECT * from sales.SalesOrderHeader
+ --SELECT * from Sales.SalesOrderDetail
+
+ SELECT name from sys.tables
+
+ SELECT c.CustomerID AS id_cliente, COUNT(soh.SalesOrderID) AS total_pedidos
+ FROM Sales.Customer c
+ INNER JOIN sales.SalesOrderHeader soh
+ on c.CustomerID  = soh.CustomerID
+ GROUP BY c.CustomerID
+
+
+--Sub consulta que trae todos los pedidos de los clientes
+ SELECT 
+    CustomerID, 
+    (SELECT COUNT(*) 
+     FROM Sales.SalesOrderHeader soh 
+     WHERE soh.CustomerID = c.CustomerID) AS TotalPedidos
+FROM Sales.Customer c;
+
+--Escribe una consulta para obtener los clientes que han hecho compras en 2023.
+--clientes
+--Compras
+--ordenes
+
+select  DISTINCT c.CustomerID, c.PersonID
+from sales.Customer c
+inner join sales.SalesOrderHeader soh
+on c.CustomerID = soh.CustomerID 
+WHERE SOH.OrderDate  LIKE '%2013%'
+
+
+
+SELECT DISTINCT c.CustomerID, c.PersonID
+FROM Sales.Customer c
+INNER JOIN Sales.SalesOrderHeader soh ON c.CustomerID = soh.CustomerID
+WHERE YEAR(soh.OrderDate) = 2013
