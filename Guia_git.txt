@@ -218,3 +218,30 @@ git help <comando> o git help <concepto> → Muestra información detallada sobr
 git help git → Proporciona una visión general del sistema Git.
 
 
+\\\Inconvenientes Presentados en git 
+\\verificar Ramas remotas 
+git fetch
+git branch -r
+
+\\Crear una rama local a partir de la remota
+git checkout -b Pruebas origin/Pruebas
+git checkout -b main origin/main
+
+\\Verifica que estás en la rama correcta
+git branch
+
+\\Actualizar la rama con los últimos cambios del remoto
+git pull
+
+\\Desactivar Git en una carpeta específica
+rm -rf .git
+
+\\actualiza local
+git pull --rebase origin main
+
+\\si ya fue aplicado no es necesario
+git add .
+git rebase --continue
+
+\\forzar el cambio
+git push --force origin main
