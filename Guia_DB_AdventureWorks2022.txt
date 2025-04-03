@@ -1,0 +1,2 @@
+https://www.dbdiagrams.com/sql-server/sql-server-adventureworks-diagram/
+https://dataedo.com/samples/html/AdventureWorks/doc/AdventureWorks_2/tables.html

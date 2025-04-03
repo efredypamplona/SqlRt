@@ -159,3 +159,18 @@ SELECT DISTINCT c.CustomerID, c.PersonID
 FROM Sales.Customer c
 INNER JOIN Sales.SalesOrderHeader soh ON c.CustomerID = soh.CustomerID
 WHERE YEAR(soh.OrderDate) = 2013
+
+--¿Cómo encontrar productos que nunca han sido vendidos usando NOT EXISTS?
+select prod.ProductID, prod.Name
+from Production.Product prod
+where not exists (
+select 1
+from sales.SalesOrderDetail sod 
+where sod.ProductID = prod.ProductID
+);
+
+--ota manera para ver el resultado
+SELECT p.ProductID, p.Name
+FROM Production.Product p
+LEFT JOIN Sales.SalesOrderDetail sod ON p.ProductID = sod.ProductID
+WHERE sod.ProductID IS NULL;
