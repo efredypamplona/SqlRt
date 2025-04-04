@@ -185,3 +185,5 @@ from HumanResources.Employee he
 join HumanResources.EmployeePayHistory heh
 on he.BusinessEntityID = heh.BusinessEntityID
 order by heh.Rate desc
+
+--Escribe una consulta que use una window function para calcular el total acumulado de ventas por cliente.
