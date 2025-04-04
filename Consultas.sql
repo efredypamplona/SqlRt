@@ -176,3 +176,12 @@ LEFT JOIN Sales.SalesOrderDetail sod ON p.ProductID = sod.ProductID
 WHERE sod.ProductID IS NULL;
 
 --¿Cómo escribirías una consulta para calcular el precio promedio de los productos vendidos en Sales.SalesOrderDetail?
+select avg(sod.UnitPrice) as promedio
+from sales.SalesOrderDetail sod
+
+--¿Cómo podrías encontrar empleados con el salario más alto en la tabla HumanResources.EmployeePayHistory?
+select DISTINCT he.JobTitle,heh.Rate
+from HumanResources.Employee he
+join HumanResources.EmployeePayHistory heh
+on he.BusinessEntityID = heh.BusinessEntityID
+order by heh.Rate desc
