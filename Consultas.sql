@@ -187,3 +187,14 @@ on he.BusinessEntityID = heh.BusinessEntityID
 order by heh.Rate desc
 
 --Escribe una consulta que use una window function para calcular el total acumulado de ventas por cliente.
+SELECT 
+    soh.CustomerID,
+    soh.SalesOrderID,
+    soh.OrderDate,
+    soh.TotalDue,
+    SUM(soh.TotalDue) OVER (
+        PARTITION BY soh.CustomerID 
+        ORDER BY soh.OrderDate
+    ) AS TotalAcumulado
+FROM Sales.SalesOrderHeader soh
+ORDER BY soh.CustomerID, soh.OrderDate;
