@@ -6,11 +6,11 @@ WHERE TABLE_NAME = 'Product'
 
 --concejos para evitar que te confundas con los join 
 -- 1. Usa alias descriptivos
-FROM Production.Product p
-JOIN Production.ProductSubcategory subcat ON p.ProductSubcategoryID = subcat.ProductSubcategoryID
-JOIN Production.ProductCategory cat ON subcat.ProductCategoryID = cat.ProductCategoryID
+--FROM Production.Product p
+--JOIN Production.ProductSubcategory subcat ON p.ProductSubcategoryID = subcat.ProductSubcategoryID
+--JOIN Production.ProductCategory cat ON subcat.ProductCategoryID = cat.ProductCategoryID
 
-p.ProductSubcategoryID = subcat.ProductCategoryID -- ⚠️ se nota más el error
+--p.ProductSubcategoryID = subcat.ProductCategoryID -- ⚠️ se nota más el error
 
 
 --4. Prueba los JOIN de dos en dos
